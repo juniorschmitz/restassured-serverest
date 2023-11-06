@@ -22,6 +22,7 @@
         <allure.cmd.download.url>
             https://repo.maven.apache.org/maven2/io/qameta/allure/allure-commandline
         </allure.cmd.download.url>
+        <faker.version>1.0.2</faker.version>
     </properties>
     <dependencies>
         <dependency>
@@ -91,6 +92,19 @@
             <version>${allure.version}</version>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>com.github.javafaker</groupId>
+            <artifactId>javafaker</artifactId>
+            <version>${faker.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>json-schema-validator</artifactId>
+            <version>${restassured.version}</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
@@ -112,6 +126,7 @@
                 </dependencies>
             </plugin>
 
+                 
             <plugin>
                 <groupId>io.qameta.allure</groupId>
                 <artifactId>allure-maven</artifactId>
